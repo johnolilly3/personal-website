@@ -1,0 +1,20 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "John Lilly's Site",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "autoprefixer": "^10.4.20",
+    "markdown-it": "^14.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}
