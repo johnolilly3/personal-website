@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title or site.name }}</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or 'John Lilly' }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    {{ content | safe }}
+<body class="flex flex-col min-h-screen">
+    <header class="bg-gray-100 p-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">John Lilly</a>
+            <ul class="flex space-x-4">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/posts">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto flex-grow p-4">
+        {{ content | safe }}
+    </main>
+
+    <footer class="bg-gray-100 p-4 text-center">
+        <p>&copy; {{ currentYear }} John Lilly. All rights reserved.</p>
+    </footer>
 </body>
 </html>
